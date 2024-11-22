@@ -3,59 +3,6 @@ html {
 
     * {
         box-sizing: border-box; } }
-
-/* custom properties */
-
-
-body {
-
-    /* kleur */
-
-    --standard-color: #222226;
-    --second-standard-color: white;
-    --third-standard-color: #666666;
-    --changeable-color: #364BF7;
-    
-    /* font */
-    
-    --main-font: "Archivo";
-    --secondary-font: "Martian Mono";
-    --footer-font: "Inter";
-    
-    /* font size headings */
-        
-    --font-size-xxl: 96px;
-    --font-size-xl: 64px;
-    --font-size-l: 48px;
-    --font-size-m: 32px;
-    --font-size-s: 24px;
-    --font-size-xs: 24px;
-    /* font-size-extra */
-
-    --font-size-paragraph: 18px;
-    --font-size-subtext: 16px;
-    --font-size-links: 12px;
-    --font-size-boldlinks:14px;
-    --font-size-ftlinks: 18px;
-
-    /* line-height */
-
-    --line-height-xxl: 96px;
-    --line-height-xl: 64px;
-    --line-height-l: 48px;
-    --line-height-m: 40px;
-    --line-height-s: 32px;
-    --line-height-xs: 24px;
-
-    /* letter-spacing */
-    
-    --letter-spacing-main: -4%;
-    --letter-spacing-secondary: 0%;
-    
-    /* font-weight */
-    --standard-font-weight: 400;
-    --semibold-font-weight: 500;
-    --bold-font-weight: 600; }
    
 body, h3, p, a {
     margin: 0; }  
