@@ -1,164 +1,308 @@
 /* Schrijf hier de verschillende stijlen, die gedeeld gaan
    worden door jullie projecten */
-  body {
-    --standard-color: #222226;
-    --second-standard-color: white;
-    --third-standard-color: #666666;
-    --changeable-color: #364BF7;
-    --main-font: "Archivo";
-    --secondary-font: "Martian Mono" } 
-   
-   
-   
-   
-   #kleur{
-    .color-example-1{
-      background-color: var(--standard-color);
-      color: var(--second-standard-color)
-    }
-  
-    .color-example-2{
-      background-color: #666666;
-      color: white;
-    }
-  
-    .color-example-3{
-      background-color: #FFFFFF;
-      border: 1px solid black;
-    }
-  
-    .color-example-4{
-      background-color: #364BF7;
-      color: white;
-    }
-  
-  }
-  
+   body {
 
-    h1{
-
-      font-size: 96px;
-      font-family: var(--main-font);
-      line-height: 96px;
-      letter-spacing: -4%;
-      font-weight: 600;
-      text-transform: uppercase;
-    }
-  
-    h2{
-      font-size: 64px;
-      font-family: var(--main-font);
-      line-height: 64px;
-      letter-spacing: -4%;
-      font-weight: 600;
-      text-transform: uppercase;
-    }
-  
-    h3{
-      font-size: 48px;
-      font-family: "Archivo";
-      line-height: 48px;
-      letter-spacing: -4%;
-      font-weight: 600;
-      text-transform: uppercase;
-    }
-  
-    h4{
-      font-size: 32px;
-      font-family: "Archivo";
-      line-height: 40px;
-      letter-spacing: 0%;
-      font-weight: 400;
-      text-transform: uppercase;
-    }
-  
-    h5{
-      font-size: 24px;
-      font-family: "Archivo";
-      line-height: 40px;
-      letter-spacing: 0%;
-      font-weight: 600;
-      text-transform: uppercase;
-    }
-  
-    h6{
-      font-size: 24px;
-      font-family: "Archivo";
-      line-height: 40px;
-      letter-spacing: 0%;
-      font-weight: 400;
-      text-transform: uppercase;
-    }
-  
-    .paragraph{
-      font-size: 18px;
-      font-family: "Archivo";
-      font-weight: 400;
-      line-height: 24px;
-      letter-spacing: -4%;
-    }
-  
-    .sub-text{
-      font-size: 16px;
-      font-family: "Martian Mono";
-      font-weight: 400;
-      line-height: 24px;
-      letter-spacing: -4%;
-    }
-  
-    .unordered-lists{
-      font-family: "Martian Mono";
-      font-weight: 400;
-      text-transform: uppercase;
-      text-decoration: none;
-      line-height: 16px;
-      letter-spacing: 0%;
-    }
-  
-    .primary-cta{
-      font-family: "Martian Mono";
-      font-weight: 600;
-      text-transform: uppercase;
-      text-decoration: none;
-    }
-  
-    .unordered-lists-footer{
-      font-size: 18px;
-      font-family: "Archivo";
-      font-weight: 400;
-      line-height: 32px;
-      letter-spacing: 0%;
-      text-decoration: underline;
-    }
-  
-  
-  #buttons-black{
-    .buttons-black{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-      font-family: "Martian Mono";
-      text-transform: uppercase;
-      gap: 12px;
-      padding: 10px 16px 10px 16px;
-      border: 2px solid #222226;
-      background-color: white;
-    }
-  }
-  
-    #buttons-blue{
-      .buttons-blue{
+    /* custom properties */
+    
+    
+      /* kleur */
+    
+      --standard-color: #222226;
+      --second-standard-color: white;
+      --third-standard-color: #666666;
+      --changeable-color: #364BF7;
+      
+      /* font */
+      
+      --main-font: "Archivo";
+      --secondary-font: "Martian Mono";
+      --footer-font: "Inter";
+      
+      /* font size headings */
+          
+      --font-size-xxl: 96px;
+      --font-size-xl: 64px;
+      --font-size-l: 48px;
+      --font-size-m: 32px;
+      --font-size-s: 24px;
+      --font-size-xs: 24px;
+      /* font-size-extra */
+    
+      --font-size-paragraph: 18px;
+      --font-size-subtext: 16px;
+      --font-size-links: 12px;
+      --font-size-boldlinks:14px;
+      --font-size-ftlinks: 18px;
+    
+      /* line-height */
+    
+      --line-height-xxl: 96px;
+      --line-height-xl: 64px;
+      --line-height-l: 48px;
+      --line-height-m: 40px;
+      --line-height-s: 32px;
+      --line-height-xs: 24px;
+    
+      /* letter-spacing */
+      
+      --letter-spacing-main: -4%;
+      --letter-spacing-secondary: 0%;
+      
+      /* font-weight */
+      --standard-font-weight: 400;
+      --semibold-font-weight: 500;
+      --bold-font-weight: 600; }
+     
+       
+       
+      
+        
+      header {
+        font-family: var(--main-font);
+        padding-bottom: 40px;
+      }
+       
+       #kleur{
+    
+        .color-one{
+          background-color: var(--standard-color);
+          color: var(--second-standard-color)
+        }
+      
+        .color-two{
+          background-color: var(--third-standard-color);
+          color: var(--second-standard-color);
+        }
+      
+        .color-three{
+          background-color: var(--second-standard-color);
+          border: 1px solid var(--standard-color);
+        }
+      
+        .color-four{
+          background-color: var(--changeable-color);
+          color: var(--second-standard-color);
+        }
+      
+      }
+      
+    
+        h1{
+    
+          font-size: var(--font-size-xxl);
+          font-family: var(--main-font);
+          line-height: 96px;
+          letter-spacing: var(--letter-spacing-main);
+          font-weight: var(--bold-font-weight);
+          text-transform: uppercase;
+        }
+      
+        h2{
+          font-size: var(--font-size-xl);
+          font-family: var(--main-font);
+          line-height: 64px;
+          letter-spacing: var(--letter-spacing-main);
+          font-weight: var(--bold-font-weight);
+          text-transform: uppercase;
+        }
+      
+        h3{
+          font-size: var(--font-size-l);
+          font-family: var(--main-font);
+          line-height: 48px;
+          letter-spacing: var(--letter-spacing-main);
+          font-weight: var(--bold-font-weight);
+          text-transform: uppercase;
+        }
+      
+        h4{
+          font-size: var(--font-size-m);
+          font-family: var(--main-font);
+          line-height: 40px;
+          letter-spacing: var(--letter-spacing-secondary);
+          font-weight: var(--regular-font-weight);
+          text-transform: uppercase;
+        }
+      
+        h5{
+          font-size: var(--font-size-s);
+          font-family: var(--main-font);
+          line-height: 40px;
+          letter-spacing: var(--letter-spacing-secondary);
+          font-weight: var(--bold-font-weight);
+          text-transform: uppercase;
+        }
+      
+        h6{
+          font-size: var(--font-size-s);
+          font-family: var(--main-font);
+          line-height: 40px;
+          letter-spacing: var(--letter-spacing-secondary);
+          font-weight: var(--regular-font-weight);
+          text-transform: uppercase;
+        }
+      
+        .paragraph{
+          font-size: var(--font-size-paragraph);
+          font-family: var(--main-font);
+          font-weight: var(--regular-font-weight);
+          line-height: 24px;
+          letter-spacing: var(--letter-spacing-main);
+        }
+      
+        .sub-text{
+          font-size: var(--font-size-subtext);
+          font-family: var(--secondary-font);
+          font-weight: var(--regular-font-weight);
+          line-height: 24px;
+          letter-spacing: var(--letter-spacing-main);
+        }
+      
+        .unordered-lists-links{
+          font-family: var(--secondary-font);
+          font-weight: var(--regular-font-weight);
+          text-transform: uppercase;
+          text-decoration: none;
+          line-height: 16px;
+          letter-spacing: var(--letter-spacing-main);
+        }
+      
+        .primary-cta{
+          font-family: var(--secondary-font);
+          font-weight: var(--bold-font-weight);
+          text-transform: uppercase;
+          text-decoration: none;
+        }
+      
+        .unordered-lists-footerlinks{
+          font-size: var(--secondary-font);
+          font-family: var(--main-font);
+          font-weight: var(--regular-font-weight);
+          line-height: 32px;
+          letter-spacing: var(--letter-spacing-secondary);
+          text-decoration: underline;
+        }
+      
+      
+      #buttons-black{
+        .buttons-black{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 12px;
+          font-family: "Martian Mono";
+          text-transform: uppercase;
+          gap: 12px;
+          padding: 10px 16px 10px 16px;
+          border: 2px solid #222226;
+          background-color: white;
+        }
+      }
+      
+        #buttons-blue{
+          .buttons-blue{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-family: "Martian Mono";
+            text-transform: uppercase;
+            gap: 12px;
+            padding: 10px 16px 10px 16px;
+            border: 2px solid #364BF7;
+            background-color: white;
+            color: #364BF7;
+          }
+      }
+    
+      .filter {
         display: flex;
         align-items: center;
-        justify-content: center;
-        font-size: 12px;
-        font-family: "Martian Mono";
-        text-transform: uppercase;
-        gap: 12px;
-        padding: 10px 16px 10px 16px;
-        border: 2px solid #364BF7;
-        background-color: white;
-        color: #364BF7;
-      }
-  }
+        justify-content: space-between; /* Items verdeeld over de volledige breedte */
+        flex-wrap: wrap; /* Laat de items wrappen indien nodig */
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+    
+    @media (max-width: 768px) {
+        .filter {
+            flex-direction: column; /* Zet de filter items onder elkaar */
+            justify-content: center; /* Centreer items horizontaal */
+            align-items: center; /* Centreer items verticaal */
+            padding: 10px;
+        }
+    
+        .filter ul {
+            justify-content: center; /* Centreer de lijst met filters */
+            width: 100%; /* Laat de lijst de volledige breedte gebruiken */
+            text-align: center; /* Zorg ervoor dat de tekst ook gecentreerd is */
+        }
+    
+        .filter li {
+            margin-right: 0; /* Verwijder eventuele marges tussen de filter items */
+            margin-bottom: 10px; /* Voeg een kleine marge aan de onderkant toe */
+            text-align: center; /* Centreer de tekst in elke filter */
+        }
+    
+        #search-input {
+            width: 100%; /* Zorg ervoor dat de zoekbalk de volledige breedte heeft */
+            margin-bottom: 10px; /* Voeg wat ruimte onder de zoekbalk toe */
+            text-align: center;
+        }
+    }
+    
+    
+    .filter #search-input {
+        flex-wrap: wrap;
+        padding: 10px;
+        font-size: 18px;
+        margin-bottom: 10px;
+        border: 1px solid black;
+      
+    }
+    
+    .filter ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        margin-left: auto; 
+        flex-wrap: wrap;
+    
+        @media (min-width: 768px) {
+            padding: 8px;
+            flex: 1 1 1 100% ;
+        }
+    
+        li {
+            padding: 10px 20px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            white-space: nowrap;
+            position: relative;
+            @media (min-width: 768px) {
+                padding: 8px;
+            }
+        }
+    
+        .plus-sign{
+          position: absolute;
+          right: 22px;
+          top: 25px;
+          padding-right: 10px;
+          height: 25%;
+          width: 10%;
+          background: white;
+          pointer-events: none;
+        }
+    }
+    
+    .filter-element{
+      border: 2px solid black;
+      font-size: 12px;
+      text-transform: uppercase;
+      font-family: var(--secondary-font);
+      height: 52px;
+      width: 149px;
+    }
