@@ -2,16 +2,14 @@
     position: absolute;
     width: 50%;
     height: 6px;
-    background: darkblue;
+    background: var(--standard-color);
     transition: all 0.2s ease-in-out; }
 
 .hamburger span:nth-child(odd) {
-    left: 0;
-    border-radius: 9px 0 0 9px; }
+    left: 0; }
 
 .hamburger span:nth-child(even) {
-    left: 50%;
-    border-radius: 0 9px 9px 0; }
+    left: 50%; }
 
 .hamburger span:nth-child(1), .hamburger span:nth-child(2) {
     top:0; }
@@ -37,11 +35,9 @@
     left: calc(50% - 5px); }
 
 .hamburger-open .hamburger span:nth-child(3) {
-    left: calc(-100% - 5px); 
     opacity: 0; }
 
 .hamburger-open .hamburger span:nth-child(4) { 
-    left: 150%;
     opacity: 0; }
 
 .hamburger-open .hamburger span:nth-child(5) { 

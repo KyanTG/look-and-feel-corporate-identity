@@ -7,8 +7,11 @@ html {
 body, h3, p, a {
     margin: 0; }  
 
+
 h1, h2, h3, h4, h5, p {
     font-family: var(--main-font) ;}
+
+
 h2 {
     line-height: var(--line-height-s) }
 
@@ -84,30 +87,31 @@ path {
     border-top: 1px solid var(--standard-color);
     border-width: auto; }   
 
+    
     header {
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
         position: sticky;
         top:0;
         background-color: white;
         z-index: 10; 
-        padding: 16px;
+        padding: 16px !important;
+        border-bottom: 1px solid var(--standard-color);
     
         
         nav {
-            padding-top: 96px;
             position: fixed;
             left: 0;
             right: 0;
             top: 0;
             bottom: 0;
             translate: 100%;
-            transition: 0.1s;} }
+            transition: 0s;} }
     
         .nav-open {
             background-color: white;
-            padding-top: 96px;
+            padding-top: 154px;
             translate: 50%; }
     
         ul {
@@ -117,7 +121,7 @@ path {
                 font-family: var(--secondary-font);
                 font-size: var(--font-size-links);
                 text-transform: uppercase;
-                color: var(--standard-color) }
+                color: var(--standard-color); }
         
                 .headerlinkbold, .link-blauw {
                     display: flex;
@@ -131,8 +135,7 @@ path {
                     align-items: center; } 
     
 .hamburger-class {
-    padding-right: 30px;
-    padding-top: 30px; }     
+    margin-right: 16px; }     
 
     .hamburger { 
         z-index: 9;
@@ -144,8 +147,8 @@ path {
 
     @media all and (min-width: 900px) { 
         
-        .hamburger {
-            display: none; }     
+        .hamburger, .hamburger-class {
+            display: none; }
 
         header > nav {
             display: flex;
@@ -157,15 +160,15 @@ path {
         nav button {
             display: none; }
 
-        nav ul {
+        nav ul { 
             display: flex;
-            gap:8px; }
-
-        nav a {
+            justify-content: space-between; } 
+        
+        .links-links, .links-rechts {
             display: flex;
-            align-items: center;
+            justify-content: space-between;
             flex-direction: row;
-            border: none;  } }
+            gap: 32px; } }
 
 .terug-home {
     display: flex;
@@ -219,8 +222,8 @@ path {
         border: 2px solid var(--standard-color) }  
 
         @media all and (min-width: 900px) { #video {
-            margin-left: 48px;
-            margin-right: 48px; }}
+            max-width: 1312px;
+            max-height: 776px; }}
 
         .video-overlay {
             position: absolute;
@@ -232,19 +235,6 @@ path {
             justify-content: center;
             align-items: center;}
 
-
-#text2 {
-    font-family: var(--secondary-font) ;
-    font-size: var(--font-size-boldlinks);
-    letter-spacing: var(--letter-spacing-main);
-    text-transform: uppercase;
-    padding-left: 16px; 
-    padding-right: 16px;
-    padding-top: 16px;}
-
-    @media all and (min-width: 1080px) {#text2 { 
-        width: 528px; } }
-
 .informatie {
     padding-left: 16px;
     padding-right: 16px;
@@ -252,9 +242,11 @@ path {
    h2 { 
     font-size: var(--font-size-s);
     font-weight: var(--standard-font-weight);
+    line-height: var(--line-height-m);
+    text-transform: none;
     padding-bottom: 62px;
     padding-top: 92px; 
-    margin: 0px         ;} }      
+    margin: 0px; } }      
 
         .button-leden {
             display: flex;
@@ -263,19 +255,32 @@ path {
             padding-top: 48px;
             padding-bottom: 68px; } 
 
+        #text2 {
+            font-family: var(--secondary-font) ;
+            font-size: var(--font-size-boldlinks);
+            letter-spacing: var(--letter-spacing-main);
+            text-transform: uppercase;
+            padding-left: 16px; 
+            padding-right: 16px;
+            padding-top: 16px; }
+
         #text3 {
             padding-bottom: 16px;  }
 
 @media all and (min-width: 1080px) {.informatie { 
     width: 752px; } }
         
-    @media all and (min-width: 1080px) {#DDAH2, #text2 { 
-        padding-top: 48px; } }              
+    @media all and (min-width: 1080px) {#DDAH2 { 
+        padding-top: 48px; } }
+        
+    @media all and (min-width: 1080px) {#text2 { 
+        width: 528px; 
+        padding-top: 64px; } }
 
     @media all and (min-width: 1080px) {.informatie-responsive {
         display:flex;  
-        justify-content: flex-start;
-        flex-direction: row; } }
+        justify-content: center;
+        max-width: 1312px; } }
 
         @media all and (min-width: 1080px) {.button-leden { 
             display:flex;  
@@ -310,7 +315,7 @@ path {
     padding-top: 96px;
     padding-bottom: 96px;
     padding-left: 16px; 
-    padding-right: 16px;}
+    padding-right: 16px; }
 
     #organisatie-kop {
         display: flex;
@@ -326,38 +331,50 @@ path {
             font-size: 40px;
             line-height: var(--line-height-m);
             letter-spacing: var(--letter-spacing-main);
-            text-transform: uppercase; }   
+            text-transform: uppercase;
+            max-width: 864px; }   
  
             #tekst5 {
                 font-size: var(--font-size-paragraph);
-                font-weight: var(--semibold-font-weight); }    
+                font-weight: var(--semibold-font-weight);
+                max-width: 864px; }    
 
 
 .medewerkers {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 360px);
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    padding-right: 16px;
+    padding-left: 16px;
     
     article {
         display: flex;
         flex-direction: column;
-        padding: 24px; }
+        padding: 24px; 
+        width: 360px;
+        height: 760px;
+        border: solid 1px var(--standard-color);}
 
         article > img {
             align-self: center;
             object-fit: cover; 
             object-position: top;
-            outline: 1px solid #222226;
+            outline: 1px solid var(--standard-color);
             outline-offset: -1px; 
-            width: 272px;
-            height: 272px} }
+            width: 312px;
+            height: 416px; } }
+
+            /* height: 272px */
+            /* width: 272px;  */
         
         .naam-medewerker {
             font-size: 24px;
             font-weight: 400;
             padding-top: 24px;
-            width: 272px; }     
+            text-transform: none;
+            width: 312px; }   
+            
+             /* width: 272px;  */
 
         .infopersoon {
             font-family: var(--secondary-font);
@@ -365,7 +382,9 @@ path {
             font-size: 14px;
             padding-top: 16px; 
             padding-bottom: 64px;
-            width: 272px; }
+            width: 312px; }
+
+             /* width: 272px;  */
 
         .container-links-personen {
             display: flex;
@@ -385,13 +404,16 @@ path {
         justify-content: center;
         flex-direction: column;
         height: 400px;
-        width: 100%;
+        width: 360px;
+        height: 760px;
+        padding: 24px;
+        border: 1px solid var(--standard-color); 
     
         h3 {
           font-size: var(--font-size-s);
-          font-weight: var(--semibold-font-weight);
-          margin-left: 16px;
-          margin-right: 16px;}
+          font-weight: var(--regular-font-weight);
+          text-transform: none;
+          width: 312px;}
       
         a {
           display: flex;  
@@ -399,8 +421,6 @@ path {
           font-family: var(--secondary-font);
           font-size: var(--font-size-boldlinks);
           gap: 8px;
-          margin-left: 16px;
-          margin-right: 16px;
           margin-top: 56px;
           text-transform: uppercase;
           font-weight: var(--bold-font-weight); } }
@@ -479,7 +499,7 @@ path {
 
 .footer-social {
     display: grid;
-    grid-template-columns: repeat(4,64px);
+    grid-template-columns: repeat(3,64px);
     grid-template-rows: 24px 24px;
     gap: 16px;
     padding: 40px 0px 40px 16px; 
@@ -487,7 +507,7 @@ path {
     
     p {
         grid-row: 2 ; 
-        grid-column: span 4; } 
+        grid-column: span 3; } 
     
     a {
         text-decoration: underline;
